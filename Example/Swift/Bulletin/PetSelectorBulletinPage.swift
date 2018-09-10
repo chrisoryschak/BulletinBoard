@@ -96,9 +96,9 @@ class PetSelectorBulletinPage: FeedbackPageBLTNItem {
         button.accessibilityLabel = animalType
 
         if isSelected {
-            button.accessibilityTraits |= UIAccessibilityTraitSelected
+            button.accessibilityTraits = UIAccessibilityTraits.selected
         } else {
-            button.accessibilityTraits &= ~UIAccessibilityTraitSelected
+            button.accessibilityTraits = UIAccessibilityTraits.selected
         }
 
         button.layer.cornerRadius = 12
@@ -138,12 +138,12 @@ class PetSelectorBulletinPage: FeedbackPageBLTNItem {
         let catButtonColor = appearance.actionButtonColor
         catButtonContainer?.layer.borderColor = catButtonColor.cgColor
         catButtonContainer?.setTitleColor(catButtonColor, for: .normal)
-        catButtonContainer?.accessibilityTraits |= UIAccessibilityTraitSelected
+        catButtonContainer?.accessibilityTraits = UIAccessibilityTraits.selected
 
         let dogButtonColor = UIColor.lightGray
         dogButtonContainer?.layer.borderColor = dogButtonColor.cgColor
         dogButtonContainer?.setTitleColor(dogButtonColor, for: .normal)
-        dogButtonContainer?.accessibilityTraits &= ~UIAccessibilityTraitSelected
+        dogButtonContainer?.accessibilityTraits = UIAccessibilityTraits.selected
 
         // Send a notification to inform observers of the change
 
@@ -170,12 +170,12 @@ class PetSelectorBulletinPage: FeedbackPageBLTNItem {
         let catButtonColor = UIColor.lightGray
         catButtonContainer?.layer.borderColor = catButtonColor.cgColor
         catButtonContainer?.setTitleColor(catButtonColor, for: .normal)
-        catButtonContainer?.accessibilityTraits &= ~UIAccessibilityTraitSelected
+        catButtonContainer?.accessibilityTraits = UIAccessibilityTraits.selected
 
         let dogButtonColor = appearance.actionButtonColor
         dogButtonContainer?.layer.borderColor = dogButtonColor.cgColor
         dogButtonContainer?.setTitleColor(dogButtonColor, for: .normal)
-        dogButtonContainer?.accessibilityTraits |= UIAccessibilityTraitSelected
+        dogButtonContainer?.accessibilityTraits = UIAccessibilityTraits.selected
 
         // Send a notification to inform observers of the change
 
